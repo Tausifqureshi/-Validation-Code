@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finally-Exception-Handler</title>
+</head>
+Please Enter youe Numbwe 5 two 10: <br><br>
+<input type="text" id="input" placeholder="">
+<button onclick="test()">Touching Button</button>
+<h1 id="print"></h1>
+<body>
+<script>
+//finally ko no matlab try catch me error aye ya na aye finally execute hoga hi hoga? same try catch throw wala hi same code?
+
+let num = document.getElementById("input");
+function test(){
+let data = num.value;
+    try{
+   if(isNaN(data)) {        
+     throw "This is not a Number" ; 
+}else{
+if(data<5 || data>10){         
+throw 'Number Is out of reange' 
+ }else{  
+throw ''; 
+} } 
+}catch(message){
+document.getElementById("print").innerText = message;
+}finally{        //error hoga tobhi ye chale ga?number true ho ya na ho tobhi input ki value empty"" ho jana chachye  means khali kuch lihka hua nhi hoga us me tu ye code finally se chale ga?
+
+num.value = "";     //input me range ke bher ho ya na ho number ho ya na ho tobhi ye run kar re ga finally wala input me jo bhi word number hoge sub clean ho jaye ge ?
+
+}
+}
+
+
+</script>
+
+
+
+
+    
+</body>
+</html>

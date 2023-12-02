@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number-Validation Javascript</title>
+</head>
+<body>
+
+<!-- Number validation -->
+Please Enter your number <br>
+<input type="text" name="" id="" class="" onkeyup="numbers(this)">
+<!-- jaha bhi this use us object ka referance ban jata hai means is pure input ka referance leke jaye ga numbers wale function me  -->
+<div id="result"></div>
+<script>
+document.getElementById("result").style.color = 'Green'; // color bhi chanhge text ka result wale ka
+
+function numbers(element){//element me input ka pura object ban ke aye ga?
+// document.getElementById("result").innerHTML= element.value;  //ye element this se input pura object bana diyn ta ab jo bhi ham input me type kare ge us ki value [id result ] wale me print hogi this se aisa work hot hai?
+       
+if(isNaN(element.value)){ //isNaN ye check karta hai number hai ya nhi? means element me number value hai to true wrana flase aye ga?
+
+document.getElementById("result").innerText = 'Please Enter Number Only';// number nhi type to ye error aye ga
+ }
+ else{
+ document.getElementById("result").innerText = '';//agre nummber to type  hoga to koim error nhi aye gi?
+
+
+if(element.value.length >= 10){ //Number ki length 10 se jayda menas > grater then 10 hai to bhi error aye ga
+  document.getElementById("result").innerText = 'Please Only Ten Digit Valid Number 1-9';
+}
+else{
+    document.getElementById("result").innerText = ''; //10 se kam to koi error nhi aye ga fi
+}
+
+ }
+}
+
+</script>
+
+    
+</body>
+</html>

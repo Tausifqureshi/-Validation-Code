@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-Catch-Throw</title>
+</head>
+<body>
+Please Enter youe Numbwe 5 two 10: <br><br>
+<input type="text" id="input" placeholder="">
+<button onclick="test()">Touching Button</button>
+<h1 id="print"></h1>
+<!-- throw ap jo error bhjna chahte ho o error thwor karta hai ye aisi koi error ati hai jo try and catch me nhi asakti o throw me ati hai-   -->
+    
+<script>
+    let num = document.getElementById("input");
+function test(){
+ let data = num.value;
+ try{
+   if(isNaN(data)) {        // upper wala data varible check kar ra hai number hai ya nhi
+     throw "This is not a Number" ;  //agar number nhi dale ge to ye wala error aye ga
+    }
+
+    else{
+if(data<5 || data>10){          //number>5 se chota nhi hona or 10 se > bada nhi hona ||or oparetor use
+throw 'Number Is out of reange'  //throw me upper wale ka erroe aya ga 10 5 wala ka error ye line se aye ga
+ }
+ else{  
+throw '';  //6,7 number to koi range wale error nhi aye ga dirct 10 ke baad jo number dalo ge tab range wala error ayega
+
+ }
+    } 
+
+}catch(message){      //throw is message wale variable se mile ga
+document.getElementById("print").innerText = message; //throw ne to error bheja ta message wale varibale ko o yaha se print hoga catch wale se
+ }
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES-6-Modern-JS-Toturial</title>
+</head>
+
+<body>
+
+  <script>
+    //JS ES6-Class? ES6 me ayi hai class js me? ES6 JS ne class naam ka keyword diya? class me ek se jayada constructor nhi bana sakte har class ke pass ek hi constructor hota hai? 
+    class Preson {   //ye ek class defind hohi?
+
+      constructor(uName, uAge) { //constructor property ko initialize kare ga? uName uAge varibal ya perameter samjo jo bhi
+
+        this.name = uName; //static bhi rahk sakte dynamic bhi static khud se set karna dynemic constructor se lana hai?uname or uage varible ke help se defind huye?
+        this.age = uAge;
+
+      }
+      details() {   //ye details name ka function hai?
+        console.log(`The age of ${this.name} is ${this.age}`);
+      }
+    }
+    const p = new Preson('Tausif', 24);// ye preson ka object defienf new keyword se? new two argument magne ga jo ham upper paramert pass kiye hai
+    p.details() //ye console me data print karwaye ge? p jaisa or koi object bana ke same class use kar sakte hai?
+
+
+
+
+
+
+    //JS ES6-Array Map method? ye ek new Array banata hai ?Map har ek element ke liye ek bar loop chalata hai?
+    // const course = ['HTML','CSS','JAVASCRIPT','PHP','JAVA'];
+    // const newcourse =course.map((c)=>{//ek call back leta hai map? c ek varibal hai jo course me se ek value nikal ke dega?
+    // return `<li> ${c} </li>` ;//li tag me c name ka varibal jaye ga jo bhi  us me value aye gi
+    // })       
+    // console.log(course);
+    // console.log(newcourse); //li me sub add
+    //Map Second Example Tabel print karwana
+    // const series = [1,2,3,4,5,6,7,8,9,10];
+    // const num =2; //koi bhi number dal sakte?
+    // const tebal = series.map((s)=> s*num);   //single parameter ko arrow me retrun nhi bhi karwa sakte hai?
+    // console.log(tebal)
+
+
+
+
+
+
+
+    //JS ES6-Rest and Spread oparetor?
+    //Example Spread ... oparetor ? ye work karta hai kisi array or object ki prorperty ko split karta hai means ek new array create but us me old array ki prorpy lane ke liye use hota hai ye spread oparetor?
+    // const oldArray = [1,2,3,4,5];
+    // const nwArray =  [...oldArray,6,7,8]    //jo value dalo ge onwArray me jaye gi oldArray koi bhi value aye gi is me?
+    // console.log(nwArray)
+
+    // rest ... oparetor kisi bhi function me list of argument ko array me convert karna ?
+
+    // const sum = (...numbers) => {   //agar value badti bhi to bhi is me kitne bhi number pass kar paye ge
+    //        let total = 0;
+    //        numbers.forEach((n)=>{    //for mr ekm function pass karan hota hai n parameter hai
+
+    //         total += n;     // total jo 0 ta ab us me assing hoga n+ me ek ek? 
+    //        })
+    //        return total;
+    // }
+    // document.writeln(sum(1,2,3,4,5,6));   //jitni bhi value badti hai us ka bi sum hoke aye ga rest se
+
+
+
+
+
+    //JS ES6-Promies?
+    // const myPro = new Promise((resolve, reject) => {
+    //    const a = 5 , b = 6;   //2 variabal hai ye 
+    //    const c = a+b;
+
+    //    if(c === 11){
+    //     resolve("yes a+b equal 11");
+
+    //    }else{
+    //      reject("no a+b equal 4")
+
+    //    }
+    // })
+    // myPro.then((re) =>{       //mypro successfull execute hota hai to ye wala chale ga re resolve ke liye
+    //   console.log(re)
+    // }).catch((error)=>{      //error ke liye ye catch wala run hoga error ke liye reject wala ye varibal 
+    //   console.log(error)
+    // })
+
+    
+    //JS ES6 Template literals?
+    // let name = "Tauisf";
+    // console.log(`welcome to ${name} ! have a nice day`)
+
+
+  
+
+
+
+
+
+
+
+
+
+  </script>
+  <!-- <script src="main.js"></script> -->
+
+</body>
+
+</html>

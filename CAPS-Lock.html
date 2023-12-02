@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CAPS.Lock</title>
+    <style>
+/* *{ margin: 0; padding: 0; } */
+
+body{
+    background-color: #384047;
+    font-size: 10px;
+}
+
+ form{ 
+    background: #fff;
+    padding: 4em 4em 2em;
+    max-width: 400px;
+    margin: 5px auto 0;
+    box-shadow: 0 0 1em #222;
+    border-radius: 5px;
+}
+
+p{ margin: 0 0 3em 0; 
+    position: relative;
+
+}
+
+label{ width: 200px; display: block; font-size: 1.6em; margin:0 0.5em;}
+
+input{width: 250px; display: block; font-size: 20px; background-color: #dadce0; border: none;outline: none; padding:5px 10px;}
+
+label::after{ content: '*'; } */
+
+error{ font-size: 17px; margin-top: 3px; color: red; }
+    </style> 
+
+</head>
+<body>
+
+<form action="#" method="post">
+ <p>
+<h1 style="font-size: 30px;text-align: center; margin-right: 20px;">Registration From</h1>
+</p> 
+
+<p>
+ <label for="username">Username</label>   
+ <input id="username" name="username" placeholder="username" type="text" autofocus style="display: block";>
+</p>
+
+<p>
+<label for="Password">Password</label>
+<input id="Password" name="Password" type="password" style="display: block";>
+</p>
+
+<p>
+<label for="confirm-Password">Confirm-Password</label>
+<input id="confirm-Password" name="confirm-Password" type="password" style="display: block";>
+<error id="error"></error>
+</p>
+
+<p>
+<input type="submit" id="submit" value="SUBMIT" style="display: block;"> 
+<h1 id="error" style="display: block;"></h1>
+</p> 
+</form>  
+<script>
+  //js Capslok means jab ham password use karte hai side pe to CAPC-LOCK ON YA OFF HAi?  
+window.addEventListener('keyup', event =>{   //keyup or ek event fire hora addeventlistener me
+var cap = event.getModifierState('CapsLock');//check kare ka jo abhi event hua ta o kon sa ta capslock on hua ya nhi?
+
+   if(cap){
+    document.getElementById("error").innerHTML = 'WARNIG PLEASE CAPSLOCK ON';
+
+   }else{
+    document.getElementById("error").innerHTML = '';
+
+   }
+
+    })
+   
+    
+</script>  
+</body>
+</html>

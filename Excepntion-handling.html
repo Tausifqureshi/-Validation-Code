@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception-Handling Javascript</title>
+</head>
+<body>
+<!--  -->
+<!--     
+<div id="nice">Tausif</div>
+<button onclick="show()">hello</button> -->
+
+<!-- //Exception-Handling -->
+<button onclick="test()">Clicked me</button>
+<div id="res"></div>
+
+ <script>
+//Exception-Handling?menas error handling hoti hai ye exception js me? work karti hai try catch finally throw in ko use karte hai js me exception ke liye /try me ham apna code type karta hai but try me kpoi error ati hai us se ham catch me dalte hai? 
+function test(show){ 
+ try{                        //is me agar error ane ke chancen tu error wala code catch lega
+ // docume.write('Tausif Qureshi Please Details Fullfil')      //first example ye  
+
+    let num1 = 5 ;                                           //second Example
+    let num2=num1.toUpperCase(); 
+    document.writeln(num2);                                    
+}
+ catch(err)                      //ye err ek variable hai jo bhi error aye ga is me execute hoga             {
+  {document.getElementById("res").innerHTML= err;
+}
+}
+
+ 
+
+
+
+
+
+// var hidd = document.getElementById("res");
+// var disp = 0;
+
+// function show(){
+//     if(disp == 1){
+//         hidd.style.display = 'block';
+//         disp = 0;
+//     }
+//     else{
+//      hidd.style.display = 'none';
+//         disp = 1;
+
+//     }
+// }
+
+
+
+ </script>   
+    
+</body>
+</html>
